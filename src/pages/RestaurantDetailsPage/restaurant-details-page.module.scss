@@ -56,4 +56,20 @@
       }
     }
   }
+  @media screen and (max-width: 768px) {
+    .card {
+      .row {
+        flex-direction: column;
+        .col {
+          h2 {
+            text-align: center;
+          }
+          img {
+            width: 100%;
+          }
+        }
+      }
+    }
+    flex-direction: column;
+  }
 }
