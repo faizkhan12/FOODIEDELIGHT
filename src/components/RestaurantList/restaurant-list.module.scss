@@ -1,0 +1,26 @@
+.restaurantList {
+  h2 {
+    text-align: center;
+  }
+  .card {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+  .pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+
+    button {
+      margin: 0 5px;
+      padding: 5px 10px;
+      cursor: pointer;
+
+      &.active {
+        background-color: #007bff;
+        color: white;
+      }
+    }
+  }
+}

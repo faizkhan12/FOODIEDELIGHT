@@ -1,0 +1,92 @@
+.form {
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+
+  .formContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    .formItem {
+      display: flex;
+      flex-direction: column;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: 600;
+    }
+
+    input,
+    textarea {
+      display: block;
+      background: #fff;
+      width: 100%;
+      padding: 10px 8px;
+      border: 1px solid #ccc;
+      outline: none;
+      border-radius: 15px;
+      color: #000;
+    }
+
+    .fullWidth {
+      grid-column: 1 / -1;
+      .menuItem {
+        display: flex;
+        flex-direction: column;
+        input {
+          margin-bottom: 5px;
+        }
+      }
+    }
+    .addMenuItem {
+      margin-top: 10px;
+      padding: 10px;
+      background-color: transparent;
+      color: #000;
+      border: 1px solid #ccc;
+      cursor: pointer;
+      border-radius: 3px;
+
+      &:hover {
+        background-color: #0056b3;
+      }
+      &:disabled {
+        background-color: #ccc;
+        cursor: not-allowed;
+      }
+    }
+    .error {
+      color: red;
+      font-size: 0.8rem;
+      margin-top: 5px;
+    }
+  }
+  .submitBtn {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    margin: 20px auto;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 3px;
+
+    &:hover {
+      background-color: #666;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    width: 90%;
+    .formContainer {
+      grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+  }
+}
